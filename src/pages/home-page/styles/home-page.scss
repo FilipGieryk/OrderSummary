@@ -1,0 +1,126 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+/// 
+/// 
+/// 
+:root{
+--background-color: #f8f8f8;
+--panel-color: #FFFFFF;
+--text-color: #85859B;
+--primary-color: #680262;
+--hover-color: #490245;
+--border-radius: 16px;
+--font-family: 'Manrope', sans-serif;
+
+}
+
+html, body{
+height: 100%;
+background-color: var(--background-color);
+font-family: var(--font-family) ;
+}
+
+#home-page{
+background-color: var(--panel-color);
+display: flex;
+flex-direction: column;
+width: 25%;
+height: 75%;
+margin: 5% auto;
+border-radius: var(--border-radius);
+text-align: center;
+#primary-image{
+    border-radius: 16px 16px 0 0;
+}
+#main-text{
+    margin: 5% 13%;
+    p{
+        color:var(--text-color) ;
+    }
+}
+#choose-plan-panel{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-color);
+    align-items: center;
+    height: 12%;
+    margin: 4%;
+    border-radius: 16px;
+    #music-icon{
+        height: fit-content;
+        margin: auto 9%;
+    }
+    #pricing{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h3,p{
+            margin: 0;
+        }
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #vertical-line{
+        border: solid #CFD1DD 1px;
+        margin: 3% 9% 3% 0;
+        height: 50%;
+    }
+    a{
+        flex-shrink: 0;
+        padding-left: auto;
+        padding-right: 4%;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: bold;
+        color: #680262;
+    }
+}
+button{
+    background-color: var(--primary-color);
+    margin: 3%;
+    border-radius: var(--border-radius);
+    border: none;
+    height: 8%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: var(--hover-color);
+}
+#cancel-order{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 3%;
+    color: black;
+}
+}
+
+@media (max-width:1024px){
+#home-page{
+    width: 45%;
+}
+h1{
+    font-size: 24px;
+}
+#choose-plan-panel h3{
+    font-size: 16px;
+}
+#cancel-order,p, #choose-plan-panel a{
+    font-size: 14px;
+}
+}
+
+@media (max-width:480px){
+#home-page{
+    width: 75%;
+}
+}
